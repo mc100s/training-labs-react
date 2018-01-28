@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bulma/css/bulma.css';
+
 import './style.css';
 import foods from './foods.js'
 
