@@ -6,14 +6,14 @@
 - React | Hello React 
   - [Beginning of Hello Angular](http://learn.ironhack.com/#/learning_unit/2485)
   - [Beginning of React Tutorial](https://reactjs.org/tutorial/tutorial.html)
-- PP | Continue the React Tutorial?????
+- Mob Programming | Build a Binary Guess Game
 - React | JSX and elements
   - [Hello World](https://reactjs.org/docs/hello-world.html) <!-- 2% -->
   - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) <!-- 7% -->
   - [Rendering Elements](https://reactjs.org/docs/rendering-elements.html) <!-- 5% -->
 - React | Components and Props
   - [Components and Props](https://reactjs.org/docs/components-and-props.html) <!-- 9% -->
-- DE | Bulma Components?????
+- DE | [Bulma Components](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-bulma-components)
 
 
 <!-- 
@@ -32,12 +32,12 @@ DE | Angular | Introduction
 - React | Handling Events & Conditional Rendering
   - [Handling Events](https://reactjs.org/docs/handling-events.html) <!-- 6% -->
   - [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html) <!-- 8% -->
-- PP | lab-react-ironcontacts?????
+- PP | lab-react-ironcontacts
 - React | Lists and Keys
   - [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html) <!-- 10% -->
 - React | Forms
   - [Forms](https://reactjs.org/docs/forms.html) <!-- 10% -->
-- DE | lab-react-data-binding?????
+- DE | lab-react-data-binding
 
 <!-- 
 Angular | Modules and NgModule
@@ -54,10 +54,10 @@ DE | IronNutrition
 - React | Organize your code
   - Composition vs Inheritance (https://reactjs.org/docs/composition-vs-inheritance.html) <!-- 6% -->
   - Thinking In React (https://reactjs.org/docs/thinking-in-react.html) <!-- 10% -->
-- PP | ?????
+- PP | (in construction)
 - React Router | Introduction to Routing
 - React Router | Advanced Routing
-- DE | ?????
+- DE | (in construction)
 
 <!-- 
 Angular | Forms
@@ -73,10 +73,10 @@ DE | Cinema Billboard
 - React | HTTP with Axios
 - Express | Build a REST API
   - [REST API Express](http://learn.ironhack.com/#/learning_unit/2507)
-- PP | ?????
+- PP | (in construction)
 - React & Express | Backend / Frontend integration
 - React & Express | Code Along
-- DE | ?????
+- DE | (in construction)
 
 <!-- 
 Angular | Advanced Routing
@@ -91,10 +91,10 @@ DE | MyRecipeBook
 
 - React & Express | Authentication
 - React & Express | File Upload
-- PP | ?????
+- PP | (in construction)
 - React & Express | Route Guards
 - React & Express | Deployment
-- DE | ?????
+- DE | (in construction)
 
 <!-- 
 Authentication
