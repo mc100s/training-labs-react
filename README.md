@@ -1,12 +1,17 @@
 # Module 3 | React
 
+<!-- 
+Feedback:
+- Would be good to start with JS Recap of knowledge that are going to be reused: class, inheritence, immutability, this, binding, ...
+-->
+
 ## Week 1 | Tuesday 13th February and Thursday 15th February
 
 - Retrospective: http://learn.ironhack.com/#/learning_unit/2481
-- React | Hello React 
+- React | Hello React <!-- 120 -->
   - [Beginning of Hello Angular](http://learn.ironhack.com/#/learning_unit/2485)
   - [Beginning of React Tutorial](https://reactjs.org/tutorial/tutorial.html)
-- Mob Programming | Build a Binary Guess Game
+- Mob Programming | Build a Binary Guess Game --> <!-- No time for that -->
 - React | JSX and elements
   - [Hello World](https://reactjs.org/docs/hello-world.html) <!-- 2% -->
   - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) <!-- 7% -->
@@ -120,7 +125,7 @@ Irontrello | Dragula, Splash Screen, and Integration
 Project #3: MEAN Application
 -->
 
-## Week 5 | Saturday 10th March
+## Week 4 | Saturday 10th March
 
 - Improve your teachers MERN application
 - Project #3: MERN Application
