@@ -2,13 +2,13 @@
 
 <!-- 
 Feedback:
-- Would be good to start with JS Recap of knowledge that are going to be reused: class, inheritence, immutability, this, binding, ...
+- Would be good to start with JS Recap of knowledge that are going to be reused: class, inheritence, super, immutability, this, binding, .slice, .fill ...
 -->
 
 ## Week 1 | Tuesday 13th February and Thursday 15th February
 
 - Retrospective: http://learn.ironhack.com/#/learning_unit/2481
-- React | Hello React <!-- 120 -->
+- React | Hello React <!-- 180 minutes of course + exercise: it was hard but for those who stayed 2 more hours, the understood everything   -->
   - [Beginning of Hello Angular](http://learn.ironhack.com/#/learning_unit/2485)
   - [Beginning of React Tutorial](https://reactjs.org/tutorial/tutorial.html)
 - Mob Programming | Build a Binary Guess Game --> <!-- No time for that -->
