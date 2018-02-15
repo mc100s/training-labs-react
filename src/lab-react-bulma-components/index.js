@@ -3,49 +3,19 @@ import ReactDOM from 'react-dom';
 
 import 'bulma/css/bulma.css';
 
-// import './index.css';
-
-// class AddRandomContactButton extends React.Component {
-//   render() {
-//     return (
-//       <button onClick={this.props.onClick}>Add Random Contact</button>
-//     );
-//   }
-// }
-
-// class SortButton extends React.Component {
-//   render() {
-//     return (
-//       <button onClick={() => {this.props.onClick(this.props.field)}}>Sort by {this.props.field}</button>
-//     );
-//   }
-// }
-
-// class ContactRow extends React.Component {
-//   render() {
-//     return (
-//       <tr>
-//         <td><img src={this.props.contact.pictureUrl} alt="Picture" /></td>
-//         <td>{this.props.contact.name}</td>
-//         <td>{this.props.contact.popularity.toFixed(2)}</td>
-//         <td><button onClick={this.props.onClickDelete}>Delete</button></td>
-//       </tr>
-//     );
-//   }
-// }
 
 class Message extends React.Component {
   constructor(props) {
     super(props);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
     this.state = {
-      visibility: 'visible'
+      display: 'block'
     };
   }
   
   handleDeleteClick() {
     this.setState({
-      visibility: 'hidden'
+      display: 'none'
     })
   }
   
@@ -86,7 +56,7 @@ class Message extends React.Component {
   
   render() {
     return (
-      <article className={this.getClassName()} style={{visibility: this.state.visibility}}>
+      <article className={this.getClassName()} style={{display: this.state.display}}>
       {this.displayMessageHeader()}
       <div className="message-body">
       {this.props.children}
@@ -99,7 +69,6 @@ class Message extends React.Component {
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    console.log("DEBUG props", props);
   }
   
   getClassName() {
@@ -144,7 +113,7 @@ class Button extends React.Component {
   
   render() {
     return (
-      <button className={this.getClassName()}>{this.props.children}</button>
+      <button className={this.getClassName()} onClick={this.props.onClick}>{this.props.children}</button>
     )
   }
 }
@@ -175,47 +144,66 @@ let dairyMessages = [
 class Dairy extends React.Component {
   constructor(props) {
     super(props);
-    console.log("DEBUG props", props);
+    this.state = {
+      dairyMessages: dairyMessages
+    }
   }
   
   getAllMessages() {
     let res = [];
-    for (let i = 0; i < dairyMessages.length; i++) {
-      switch (dairyMessages[i].moodLevel) {
+    for (let i = 0; i < this.state.dairyMessages.length; i++) {
+      let className;
+      switch (this.state.dairyMessages[i].moodLevel) {
         case 1:
-          res.push(
-            <Message key={i} isDanger title={dairyMessages[i].date.toDateString()}>
-              {dairyMessages[i].text}
-            </Message>
-          )
+          className = "is-danger"
           break;
         case 2:
-          res.push(
-            <Message key={i} isInfo title={dairyMessages[i].date.toDateString()}>
-              {dairyMessages[i].text}
-            </Message>
-          )
+          className = "is-info"
           break;
         case 3:
-          res.push(
-            <Message key={i} isSuccess title={dairyMessages[i].date.toDateString()}>
-              {dairyMessages[i].text}
-            </Message>
-          )
+          className = "is-success"
           break;
       }
+      res.push(
+        <Message key={i} className={className} title={this.state.dairyMessages[i].date.toDateString()}>
+          {this.state.dairyMessages[i].text}
+        </Message>
+      )
     }
     return res;
   }
   
+  handleRandomClick() {
+    let dairyMessages = this.state.dairyMessages.slice()
+    var d = new Date(dairyMessages[dairyMessages.length-1].date.valueOf());
+    d.setDate(d.getDate() + 1);
+    dairyMessages.push({
+      date: d,
+      text: "Lorem ipsum dolor sit amet",
+      moodLevel: Math.floor(Math.random()*3)+1
+    })
+
+    this.setState({
+      dairyMessages
+    })
+  }
+
+  handleRemoveClick() {
+    let dairyMessages = this.state.dairyMessages.slice()
+    dairyMessages.shift();
+    this.setState({
+      dairyMessages
+    })
+  }
+
   render() {
     return (
       <div>
         {this.getAllMessages()}
-        <Button>Add one random diary message</Button>
+        <Button onClick={() => this.handleRandomClick()}>Add one random diary message</Button>
         <br />
         <br />
-        <Button>Remove the first diary message</Button>
+        <Button onClick={() => this.handleRemoveClick()}>Remove the first diary message</Button>
       </div>
     )
   }
@@ -291,22 +279,10 @@ class Footer extends React.Component {
 class App extends React.Component {
   render() {
     return (
-      <div style={{margin: 20}}>
-      {/* <Button isSmall isDanger className="is-rounded ironhack">Button 1</Button> */}
-      {/* <Button isSmall isSuccess>Button 2</Button> */}
-      <Message isInfo title="Hello World">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>.
-      </Message>
-
-      <Dairy />
-      {/* <Footer /> */}
+      <div className="container">
+        <h1 className="title">My diary</h1>
+        <Dairy />
       
-      {/* 
-        <Menu />
-        <StudentCardList />
-        <ApplyForm />
-        <Footer />
-      */}
       </div>
     );
   }
