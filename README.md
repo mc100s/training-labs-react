@@ -37,12 +37,12 @@ DE | Angular | Introduction
 - React | Handling Events & Conditional Rendering
   - [Handling Events](https://reactjs.org/docs/handling-events.html) <!-- 6% -->
   - [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html) <!-- 8% -->
-- PP | lab-react-ironcontacts
+- PP | [lab-react-ironcontacts](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-ironcontacts)
 - React | Lists and Keys
   - [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html) <!-- 10% -->
 - React | Forms
   - [Forms](https://reactjs.org/docs/forms.html) <!-- 10% -->
-- DE | lab-react-data-binding
+- DE | [lab-react-data-binding](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-data-binding)
 
 <!-- 
 Angular | Modules and NgModule
