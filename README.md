@@ -11,7 +11,7 @@ Feedback:
 - React | Hello React <!-- 180 minutes of course + exercise: it was hard but for those who stayed 2 more hours, the understood everything   -->
   - [Beginning of Hello Angular](http://learn.ironhack.com/#/learning_unit/2485)
   - [Beginning of React Tutorial](https://reactjs.org/tutorial/tutorial.html)
-- Mob Programming | Build a Binary Guess Game --> <!-- No time for that -->
+- Mob Programming | Build a Binary Guess Game <!-- No time for that -->
 - React | JSX and elements
   - [Hello World](https://reactjs.org/docs/hello-world.html) <!-- 2% -->
   - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) <!-- 7% -->
@@ -38,7 +38,7 @@ DE | Angular | Introduction
   - [Handling Events](https://reactjs.org/docs/handling-events.html) <!-- 6% -->
   - [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html) <!-- 8% -->
 - PP | [lab-react-ironcontacts](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-ironcontacts)
-- Optional Exercise | [lab-pizza-builder](https://github.com/mc100s/training-labs-react/tree/master/src/lab-pizza-builder)
+- Optional Exercise | [lab-react-pizza-builder](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-pizza-builder)
 - React | Lists and Keys
   - [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html) <!-- 10% -->
 - React | Forms

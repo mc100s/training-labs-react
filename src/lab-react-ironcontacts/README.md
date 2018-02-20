@@ -10,23 +10,49 @@ We are going to create contact management app with React for this producer.
 
 You can find the starter code in the starter code folder of this Github repo.
 
-## Requirements
+## Installation 
 
-- [Fork this repo](https://guides.github.com/activities/forking/)
-- Clone this repo into your `~/code/labs`
-- You must submit the entire React app
-
-## Submission
-
-Upon completion, run the following commands
+### Setup a basic project
+Commands to launch
+```sh
+$ npm install -g create-react-app # Install globally the `create-react-app` command
+$ create-react-app my-app # Create a React project folder "my-app"
+$ cd my-app
+$ rm -f src/*
+$ touch src/index.js src/index.css # Create 2 files
 ```
-$ git add .
-$ git commit -m "done"
-$ git push origin master
-```
-Navigate to your repo and create a Pull Request from your master branch to the original repository master branch.
 
-In the Pull request name, add your name and last names separated by a dash "-"
+Your `src/index.js` file
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        {/* Your application code */}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+```
+
+### Import a JSON
+
+Go to the following page and save it as `src/contacts.json`: https://raw.githubusercontent.com/mc100s/training-labs-react/master/src/lab-react-ironcontacts/contacts.json
+
+Then, inside your `src/index.js`, add the following line at the top of your file. It will define a `contacts` variable that contains the array with all values from the imported file.
+```js
+import contacts from './contacts.json'
+```
+
 
 ## Instructions
 

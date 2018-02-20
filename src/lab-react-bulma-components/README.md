@@ -19,7 +19,7 @@ $ npm install -g create-react-app # Install globally the `create-react-app` comm
 $ create-react-app my-app # Create a React project folder "my-app"
 $ cd my-app
 $ rm -f src/*
-$ touch index.js index.css # Create 2 files
+$ touch src/index.js src/index.css # Create 2 files
 ```
 
 Your `src/index.js` file
