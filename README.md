@@ -1,8 +1,11 @@
 # Module 3 | React
 
 <!-- 
-Feedback:
+Maxence feedback:
 - Would be good to start with JS Recap of knowledge that are going to be reused: class, inheritence, super, immutability, this, binding, .slice, .fill ...
+- I have started a little to fast for the students
+- The concept of JSX is hard to understand for them
+- They really like the small "mob-exercices"
 -->
 
 ## Week 1 | Tuesday 13th February and Thursday 15th February

@@ -216,10 +216,54 @@ class ExerciseA10Warning extends React.Component {
 // --------------- State and Lifecycle ---------------
 // Doc: https://reactjs.org/docs/state-and-lifecycle.html
 
+// Exercise B1
+// Display a button with a number (0 at the begining) and every time you click on it incrmets its value 
 class ExerciseB1 extends React.Component {
 }
 
+// Exercise B2
+// Display a number, that can be incremented by 1, 10 or multiple by 2 when you click on one of the 3 buttons
+class ExerciseB2 extends React.Component {
+  render() {
+    return (
+      <div className="m-3">
+        My number: 0
+        <br/><br/>
+        <button className="btn-success mr-3">+1</button>
+        <button className="btn-success mr-3">+10</button>
+        <button className="btn-success mr-3">x2</button>
+      </div>
+    )
+  }
+}
+
+// Exercise B3
+// Create a little game: the user can click on buttons to change a binary number. It changes the decimal number and when the user reached it, it displays "You win!"
+class ExerciseB3 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.randomNumber = Math.floor(16*Math.random());
+  }
+  render() {
+    return (
+      <div className="m-3">
+        Binary number: 
+        <button className="btn-success ml-1">1</button>
+        <button className="btn-success ml-1">0</button>
+        <button className="btn-success ml-1">0</button>
+        <button className="btn-success ml-1">0</button>
+        <br/><br/>
+        Decimal number: 8
+        <br/>
+        Goal: {this.randomNumber}
+        <br/><br/>
+        Keep working / You win!
+      </div>
+    )
+  }
+}
+
 ReactDOM.render(
-  <ExerciseA10 />,
+  <ExerciseB3 />,
   document.getElementById('root')
 );
