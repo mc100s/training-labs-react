@@ -38,6 +38,7 @@ DE | Angular | Introduction
   - [Handling Events](https://reactjs.org/docs/handling-events.html) <!-- 6% -->
   - [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html) <!-- 8% -->
 - PP | [lab-react-ironcontacts](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-ironcontacts)
+- Optional Exercise | [lab-pizza-builder](https://github.com/mc100s/training-labs-react/tree/master/src/lab-pizza-builder)
 - React | Lists and Keys
   - [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html) <!-- 10% -->
 - React | Forms
@@ -129,3 +130,7 @@ Project #3: MEAN Application
 
 - Improve your teachers MERN application
 - Project #3: MERN Application
+
+
+## Other resources to read
+- [React’s Component Lifecycles](https://medium.com/mofed/reacts-component-lifecycles-adf0ebc89d23)
