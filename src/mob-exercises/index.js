@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // Don't forget to update the end of the code
@@ -140,12 +141,12 @@ class ExerciseA9 extends React.Component {
 class TeacherCard extends React.Component {
   render() {
     return (
-      <div class="card" style={{width: "28rem", margin: 20}}>
-        <img class="card-img-top" src="..." alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">(Name of the instructor)</h5>
-          <p class="card-text">(Description of the instructor)</p>
-          <a href="#" class="btn btn-primary">See (city of the instructor) campus</a>
+      <div className="card" style={{width: "28rem", margin: 20}}>
+        <img className="card-img-top" src="..." alt="Card image cap" />
+        <div className="card-body">
+          <h5 className="card-title">(Name of the instructor)</h5>
+          <p className="card-text">(Description of the instructor)</p>
+          <a href="#" className="btn btn-primary">See (city of the instructor) campus</a>
         </div>
       </div>
     )
@@ -263,7 +264,178 @@ class ExerciseB3 extends React.Component {
   }
 }
 
+// Exercise B4
+// You are a Pokémon Master in training with 3 Pokemons (in 3 pokeballs): Pikachu, Bulbasaur and Dratini
+// First: Change the pokemon by clicking on one of the pokeball at the top
+// Second: Increase the level of a Pokemon by clicking on a button (+1 or +10)
+// Third: Make the Pokemon evoluate if he reaches the good level
+class ExerciseB4 extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      pokemons: [
+        {
+          id:25, // Pikachu
+          level: 1
+        },
+        {
+          id:1, // Bulbasaur
+          level: 1
+        },
+        {
+          id:147, // Dratini
+          level: 1
+        },
+        
+      ]
+    }
+  }
+  render() {
+    return (
+      <div className="text-center mt-4">
+        <img src={require("./images/pokeball-active.png") } alt="Pokeball"/>
+        <img src={require("./images/pokeball.png") } alt="Pokeball"/>
+        <img src={require("./images/pokeball.png") } alt="Pokeball"/>
+        <Pokemon />
+      </div>
+    )
+  }
+}
+
+let pokedex = {
+  1: {
+    name: "Bulbasaur",
+    evolutionId: 2,
+    evolutionLvl: 16
+  },
+  2: {
+    name: "Ivysaur",
+    evolutionId: 3,
+    evolutionLvl: 32
+  },
+  3: {
+    name: "Venusaur"
+  },
+  25: {
+    name: "Pikachu",
+    evolutionId: 26,
+    evolutionLvl: 25 // Ok, normally you should use a stone...
+  },
+  26: {
+    name: "Raichu"
+  },
+  147: {
+    name: "Dratini",
+    evolutionId: 148,
+    evolutionLvl: 30
+  },
+  148: {
+    name: "Dragonair",
+    evolutionId: 149,
+    evolutionLvl: 55
+  },
+  149: {
+    name: "Dragonite"
+  },
+}
+class Pokemon extends React.Component {
+  render() {
+    return (
+      <div className="text-center">
+        <img src={require("./images/pokemon25.png") } alt="Pikachu"/>
+        <p className="lead mb-0">Pikachu</p>
+        <p>Level 1</p>
+        <button className="btn btn-sm btn-primary mx-2">+1</button>
+        <button className="btn btn-sm btn-primary mx-2">+10</button>
+      </div>
+    )
+  }
+}
+
+// Example B1
+// API calls (example: "GET https://jsonplaceholder.typicode.com/photos/")
+class ExampleB1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pictureUrl: null
+    }
+  }
+
+  callApi(id) {
+    axios.get('https://jsonplaceholder.typicode.com/photos/'+id)
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          pictureUrl: response.data.url
+        })
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  render(){
+    return (
+      <div className="text-center">
+        {this.state.pictureUrl && <img src={this.state.pictureUrl} className="img-fluid" /> }
+        <br/>
+        <button className="btn btn-primary m-2" onClick={() => {this.callApi(1)}}>GET picture 1</button>
+        <button className="btn btn-primary m-2" onClick={() => {this.callApi(2)}}>GET picture 2</button>
+        <button className="btn btn-primary m-2" onClick={() => {this.callApi(3)}}>GET picture 3</button>
+      </div>
+    )
+  }
+}
+
+// Exercise B5
+// Display a photo from the Jsonplaceholder API based on the id typed by the user
+class ExerciseB5 extends React.Component {
+  render(){
+    return (
+      <div>
+        <form class="form-inline mt-3">
+          <div class="form-row align-items-center mx-auto">
+            <div class="col-autod">
+              <input type="number" class="form-control mb-2" id="inlineFormInput" placeholder="id" />
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-2">Display photo</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    )
+  }
+}
+
+// Exercise B6
+// First: Display a photo from the Jsonplaceholder API based on the navbar
+// Second: Update the active button in the navigation(the one with a blue background)
+// Third: Update the navigation so that you can always go left or right. Example:
+//    1 => (1) 2  3 
+//    2 =>  1 (2) 3 
+//    3 =>  2 (3) 4 
+//    4 =>  3 (4) 5 
+class ExerciseB6 extends React.Component {
+  render(){
+    return (
+      <div>
+        <nav className="mt-3">
+          <ul className="pagination justify-content-center">
+            <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+            <li className="page-item active"><a className="page-link" href="#">1</a></li>
+            <li className="page-item"><a className="page-link" href="#">2</a></li>
+            <li className="page-item"><a className="page-link" href="#">3</a></li>
+            <li className="page-item"><a className="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    )
+  }
+}
+
 ReactDOM.render(
-  <ExerciseB3 />,
+  <ExerciseB6 />,
   document.getElementById('root')
 );
