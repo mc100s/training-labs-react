@@ -63,10 +63,8 @@ DE | IronNutrition
 - React | Organize your code
   - Composition vs Inheritance (https://reactjs.org/docs/composition-vs-inheritance.html) <!-- 6% -->
   - Thinking In React (https://reactjs.org/docs/thinking-in-react.html) <!-- 10% -->
-- PP | (in construction)
-- React Router | Introduction to Routing
-- React Router | Advanced Routing
-- DE | (in construction)
+- PP | [Repoduce Thinking in React]((https://reactjs.org/docs/thinking-in-react.html)
+- Optional Advanced Exercise | Try to reproduce Pokedex.org with pokeapi.co and axios
 
 <!-- 
 Angular | Forms
@@ -79,13 +77,13 @@ DE | Cinema Billboard
 
 ## Week 3 | Tuesday 27th February and Thursday 1st March
 
+- React Router | Introduction to Routing
+- React Router | Advanced Routing
+- DE | (in construction)
 - React | HTTP with Axios
 - Express | Build a REST API
   - [REST API Express](http://learn.ironhack.com/#/learning_unit/2507)
 - PP | (in construction)
-- React & Express | Backend / Frontend integration
-- React & Express | Code Along
-- DE | (in construction)
 
 <!-- 
 Angular | Advanced Routing
@@ -98,12 +96,12 @@ DE | MyRecipeBook
 
 ## Week 3 | Saturday 3rd March
 
+- React & Express | Backend / Frontend integration
+- React & Express | Code Along
+- DE | (in construction)
 - React & Express | Authentication
 - React & Express | File Upload
 - PP | (in construction)
-- React & Express | Route Guards
-- React & Express | Deployment
-- DE | (in construction)
 
 <!-- 
 Authentication
@@ -116,6 +114,9 @@ DE | IronForum
 
 ## Week 4 | Tuesday 6th March and Thursday 8th March
 
+- React & Express | Route Guards
+- React & Express | Deployment
+- DE | (in construction)
 - Irontrello | Project Introduction
 - Irontrello | Backend Architecture
 - Irontrello | Angular Architecture
@@ -131,7 +132,6 @@ Project #3: MEAN Application
 
 ## Week 4 | Saturday 10th March
 
-- Improve your teachers MERN application
 - Project #3: MERN Application
 
 
