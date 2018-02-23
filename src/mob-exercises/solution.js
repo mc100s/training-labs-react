@@ -273,10 +273,381 @@ class ExerciseA10Warning extends React.Component {
 // --------------- State and Lifecycle ---------------
 // Doc: https://reactjs.org/docs/state-and-lifecycle.html
 
+// Exercise B1
+// Display a button with a number (0 at the begining) and every time you click on it incrmets its value 
 class ExerciseB1 extends React.Component {
+  constructor(props){
+    super(props);
+    this.increment = this.increment.bind(this);
+    this.state = {
+      counter: 0,
+    }    
+  }
+
+  increment(){
+    this.setState({
+      counter: this.state.counter + 1
+    })
+  }
+      
+  render () {
+    return (
+      <div>
+        <button className="btn-success mr-3" onClick={this.increment}>
+          {this.state.counter}
+        </button>
+      </div>  
+    )
+  }
+}
+
+// Exercise B2
+// Display a number, that can be incremented by 1, 10 or multiple by 2 when you click on one of the 3 buttons
+class ExerciseB2 extends React.Component {
+  constructor (props) {
+    super(props)
+    this.increment = this.increment.bind(this)
+    this.state = {
+      counter: 0
+    }
+  }
+
+  increment(number) {
+    this.setState({
+      counter: this.state.counter + number
+    })
+  }
+  
+  multiply() {
+    this.setState({
+      counter: this.state.counter * 2
+    })
+  }
+
+  render() {
+    return (
+      <div className="m-3">
+        My number: {this.state.counter}
+        <br/><br/>
+        <button className="btn-success mr-3" onClick={() => {this.increment(1)}}>+1</button>
+        <button className="btn-success mr-3" onClick={() => {this.increment(10)}}>+10</button>
+        <button className="btn-success mr-3" onClick={() => {this.multiply()}}>x2</button>
+      </div>
+    )
+  }
+}
+
+// Exercise B3
+// Create a little game: the user can click on buttons to change a binary number. It changes the decimal number and when the user reached it, it displays "You win!"
+class ExerciseB3 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.randomNumber = Math.floor(16*Math.random());
+    this.state= {
+      number0:0,
+      number1:0,
+      number2:0,
+      number3:1
+    }
+  }
+
+  toggleMe0() {
+    this.setState({
+      number0: 1 - this.state.number0
+    })
+  }
+
+  toggleMe1() {
+    this.setState({
+      number1: 1 - this.state.number1
+    })
+  }
+  toggleMe2() {
+    this.setState({
+      number2: 1 - this.state.number2
+    })
+  }
+  toggleMe3() {
+    this.setState({
+      number3: 1 - this.state.number3
+    })
+  }
+
+  calculateDn () {
+    let num =
+      this.state.number3 * 8 + this.state.number2 *4 + this.state.number1 *2 + this.state.number0 * 1; 
+
+    return num
+  }
+
+  win() {
+    return (this.calculateDn() === this.randomNumber) ? 'WIN' : 'Keep Working'
+
+  }
+
+  render() {
+    return (
+      <div className="m-3">
+        Binary number: 
+        <button className="btn-success ml-1" onClick={() =>{this.toggleMe3()}}>{this.state.number3}</button>
+        <button className="btn-success ml-1" onClick={() =>{this.toggleMe2()}}>{this.state.number2}</button>
+        <button className="btn-success ml-1" onClick={() =>{this.toggleMe1()}}>{this.state.number1}</button>
+        <button className="btn-success ml-1" onClick={() =>{this.toggleMe0()}}>{this.state.number0}</button>
+        <br/><br/>
+        Decimal number: {this.calculateDn()}
+        <br/>
+        Goal: {this.randomNumber}
+        <br/><br/>
+        {this.win()}
+      </div>
+    )
+  }
+}
+
+// Exercise B4
+// You are a Pokémon Master in training with 3 Pokemons (in 3 pokeballs): Pikachu, Bulbasaur and Dratini
+// First: Change the pokemon by clicking on one of the pokeball at the top
+// Second: Increase the level of a Pokemon by clicking on a button (+1 or +10)
+// Third: Make the Pokemon evoluate if he reaches the good level
+class ExerciseB4 extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      pokemons: [
+        {
+          id:25, // Pikachu
+          level: 1,
+          isActive: true
+        },
+        {
+          id:1, // Bulbasaur
+          level: 1,
+          isActive: false
+        },
+        {
+          id:147, // Dratini
+          level: 1,
+          isActive: false          
+        },
+      ]
+    }
+  }
+
+  incrementLevel(amount) {
+    let pokemons = this.state.pokemons.slice();
+    pokemons[this.showActive()].level += amount;  
+    // If the level is enough to evoluate, then change pokemons[this.showActive()]
+    this.setState({pokemons})        
+  }
+  
+  showPokemon(pokeBallId) {
+    let pokemons = this.state.pokemons.slice();
+    if (pokeBallId===0) {
+      //console.log('clicked');
+      pokemons[0].isActive = true;
+      pokemons[1].isActive = false;
+      pokemons[2].isActive = false;
+      
+      this.setState({pokemons})
+      console.log(this.state.pokemons[0].isActive)
+    }
+    else if (pokeBallId===1) {
+      pokemons[0].isActive = false;
+      pokemons[1].isActive = true;
+      pokemons[2].isActive = false;
+      this.setState({pokemons})    
+    }
+    else {
+      pokemons[0].isActive = false;
+      pokemons[1].isActive = false;
+      pokemons[2].isActive = true;
+      this.setState({pokemons})    
+    }
+  }
+
+  showActive () {
+    for (var i = 0; i < this.state.pokemons.length; i++) {
+      if (this.state.pokemons[i].isActive)
+        return i;
+    }
+  }
+
+  render() {
+    return (
+      <div className="text-center mt-4">
+        <img onClick={() => this.showPokemon(0)} src={(this.state.pokemons[0].isActive) ?require("./images/pokeball-active.png") : require("./images/pokeball.png")} alt="Pokeball"/>
+        <img onClick={() => this.showPokemon(1)} src={(this.state.pokemons[1].isActive) ?require("./images/pokeball-active.png") : require("./images/pokeball.png")} alt="Pokeball"/>
+        <img onClick={() => this.showPokemon(2)} src={(this.state.pokemons[2].isActive) ?require("./images/pokeball-active.png") : require("./images/pokeball.png")} alt="Pokeball"/>
+        <Pokemon activePoke={this.state.pokemons[this.showActive()].id} increase1={() => this.incrementLevel(1)} increase10={() => this.incrementLevel(10)} level={this.state.pokemons[this.showActive()].level}/>
+      </div>
+    )
+  }
+}
+
+let pokedex = {
+  1: {
+    name: "Bulbasaur",
+    evolutionId: 2,
+    evolutionLvl: 16
+  },
+  2: {
+    name: "Ivysaur",
+    evolutionId: 3,
+    evolutionLvl: 32
+  },
+  3: {
+    name: "Venusaur"
+  },
+  25: {
+    name: "Pikachu",
+    evolutionId: 26,
+    evolutionLvl: 25 // Ok, normally you should use a stone...
+  },
+  26: {
+    name: "Raichu"
+  },
+  147: {
+    name: "Dratini",
+    evolutionId: 148,
+    evolutionLvl: 30
+  },
+  148: {
+    name: "Dragonair",
+    evolutionId: 149,
+    evolutionLvl: 55
+  },
+  149: {
+    name: "Dragonite"
+  },
+}
+class Pokemon extends React.Component {
+  render() {
+    return (
+      <div className="text-center">
+        <img src={require("./images/pokemon"+this.props.activePoke+".png") } alt={pokedex[this.props.activePoke].name}/>
+        <p className="lead mb-0">{pokedex[this.props.activePoke].name}</p>
+        <p>{this.props.level}</p>
+        <button className="btn btn-sm btn-primary mx-2" onClick={this.props.increase1}>+1</button>
+        <button className="btn btn-sm btn-primary mx-2" onClick={this.props.increase10}>+10</button>
+      </div>
+    )
+  }
+}
+
+// Example B1
+// API calls (example: "GET https://jsonplaceholder.typicode.com/photos/")
+class ExampleB1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pictureUrl: null
+    }
+  }
+
+  callApi(id) {
+    axios.get('https://jsonplaceholder.typicode.com/photos/'+id)
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          pictureUrl: response.data.url
+        })
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  render(){
+    return (
+      <div className="text-center">
+        {this.state.pictureUrl && <img src={this.state.pictureUrl} className="img-fluid" /> }
+        <br/>
+        <button className="btn btn-primary m-2" onClick={() => {this.callApi(1)}}>GET picture 1</button>
+        <button className="btn btn-primary m-2" onClick={() => {this.callApi(2)}}>GET picture 2</button>
+        <button className="btn btn-primary m-2" onClick={() => {this.callApi(3)}}>GET picture 3</button>
+      </div>
+    )
+  }
+}
+
+// Exercise B5
+// Display a photo from the Jsonplaceholder API based on the id typed by the user
+class ExerciseB5 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 42,
+      pictureUrl: null
+    }
+  }
+  submitHandler(e) {
+    console.log("submitHandler")
+    e.preventDefault();
+    this.callApi(this.state.value)
+  }
+
+  changeHandler(event) {
+    console.log("changeHandler", event.target.value)
+    this.setState({
+      value: event.target.value
+    })
+    this.callApi(event.target.value)
+  }
+
+
+  callApi(id) {
+    axios.get('https://jsonplaceholder.typicode.com/photos/'+id)
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          pictureUrl: response.data.url
+        })
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  render(){
+    return (
+      <div>
+        <form class="form-inline mt-3" 
+          onSubmit={(e) => {this.submitHandler(e)}}
+        >
+          <div class="form-row align-items-center mx-auto">
+            <div class="col-autod">
+              <input 
+                type="number" 
+                className="form-control mb-2" 
+                id="inlineFormInput" 
+                placeholder="id" 
+                value={this.state.value}
+                onChange={(e) => {this.changeHandler(e)}}
+              />
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-2">Display photo</button>
+            </div>
+          </div>
+        </form>
+        {this.state.pictureUrl && <img src={this.state.pictureUrl} className="img-fluid" /> }
+      </div>
+    )
+  }
+}
+
+// Exercise B6
+// First: Display a photo from the Jsonplaceholder API based on the navbar
+// Second: Update the active button in the navigation(the one with a blue background)
+// Third: Update the navigation so that you can always go left or right. Example:
+//    1 => (1) 2  3 
+//    2 =>  1 (2) 3 
+//    3 =>  2 (3) 4 
+//    4 =>  3 (4) 5 
+class ExerciseB6 extends React.Component {
 }
 
 ReactDOM.render(
-  <ExerciseA10 />,
+  <ExerciseB4 />,
   document.getElementById('root')
 );
