@@ -63,7 +63,7 @@ DE | IronNutrition
 - React | Organize your code
   - Composition vs Inheritance (https://reactjs.org/docs/composition-vs-inheritance.html) <!-- 6% -->
   - Thinking In React (https://reactjs.org/docs/thinking-in-react.html) <!-- 10% -->
-- PP | [Repoduce Thinking in React]((https://reactjs.org/docs/thinking-in-react.html)
+- PP | [Reproduce Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 - Optional Advanced Exercise | Try to reproduce Pokedex.org with pokeapi.co and axios
 
 <!-- 
@@ -137,3 +137,7 @@ Project #3: MEAN Application
 
 ## Other resources to read
 - [React’s Component Lifecycles](https://medium.com/mofed/reacts-component-lifecycles-adf0ebc89d23)
+
+## Exercises solutions
+- [Mob Exercises](https://github.com/mc100s/training-labs-react/blob/master/src/mob-exercises/solution.js)
+- [Lifting State Up](https://github.com/mc100s/training-labs-react/blob/master/src/mob-exercises/lifting-state-up.js)

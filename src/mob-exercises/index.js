@@ -435,7 +435,89 @@ class ExerciseB6 extends React.Component {
   }
 }
 
+
+
+class ListExercise extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      pokemons: []
+    }
+  }
+  
+  componentDidMount() {
+    for (var i=1; i<=10; i++) {
+      this.callAPI(i)
+    }
+  
+    // Fake fast API call 
+    let list = [{
+      name : "Antoine",
+      img : "",
+      id : 0,
+    }]
+    this.setState ({
+      pokemons: list
+    })
+  }
+
+  callAPI (id) {
+    axios.get("http://pokeapi.co/api/v2/pokemon/"+id)
+    .then ((response) => {
+      console.log (response)
+      let list = this.state.pokemons.slice();
+      list.push({
+        name : response.data.name,
+        img : response.data.sprites.front_default,
+        id : response.data.id,
+      })
+      list.sort( (a,b) => {
+        if (a.id < b.id) {
+          return -1
+        } else {
+          return 1
+        }
+      })
+      this.setState ({
+        pokemons: list
+      })
+      console.log (this.state.pokemons)
+    })
+  }
+
+  renderPokemons () {
+    let list = [];
+    for (var i=0; i<this.state.pokemons.length; i++) {
+      list.push (
+        <PokemonItem key={this.state.pokemons[i].id} pokemon={this.state.pokemons[i]} />
+      )
+    }
+    return list;
+  }
+
+  render(){
+    return (
+      <div>
+        <ul> 
+          {this.renderPokemons()}
+        </ul>
+      </div>
+    )
+  }
+}
+
+class PokemonItem extends React.Component {
+  render() {
+    return (
+      <li>
+        {this.props.pokemon.name}
+        <img src = {this.props.pokemon.img} />
+      </li>
+    )
+  }
+}
+
 ReactDOM.render(
-  <ExerciseB6 />,
+  <ListExercise />,
   document.getElementById('root')
 );
