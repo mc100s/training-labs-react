@@ -13,14 +13,14 @@ Maxence feedback:
 - Retrospective: http://learn.ironhack.com/#/learning_unit/2481
 - React | Hello React <!-- 180 minutes of course + exercise: it was hard but for those who stayed 2 more hours, the understood everything   -->
   - [Beginning of Hello Angular](http://learn.ironhack.com/#/learning_unit/2485)
-  - [Beginning of React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+  - [Doc | Beginning of React Tutorial](https://reactjs.org/tutorial/tutorial.html)
 - Mob Programming | Build a Binary Guess Game <!-- No time for that -->
 - React | JSX and elements
-  - [Hello World](https://reactjs.org/docs/hello-world.html) <!-- 2% -->
-  - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) <!-- 7% -->
-  - [Rendering Elements](https://reactjs.org/docs/rendering-elements.html) <!-- 5% -->
+  - [Doc | Hello World](https://reactjs.org/docs/hello-world.html) <!-- 2% -->
+  - [Doc | Introducing JSX](https://reactjs.org/docs/introducing-jsx.html) <!-- 7% -->
+  - [Doc | Rendering Elements](https://reactjs.org/docs/rendering-elements.html) <!-- 5% -->
 - React | Components and Props
-  - [Components and Props](https://reactjs.org/docs/components-and-props.html) <!-- 9% -->
+  - [Doc | Components and Props](https://reactjs.org/docs/components-and-props.html) <!-- 9% -->
 - DE | [Bulma Components](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-bulma-components)
 
 
@@ -36,16 +36,16 @@ DE | Angular | Introduction
 ## Week 2 | Tuesday 20th February and Thursday 22nd February
 
 - React | State and Lifecycle
-  - [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) <!-- 15% -->
+  - [Doc | State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) <!-- 15% -->
 - React | Handling Events & Conditional Rendering
-  - [Handling Events](https://reactjs.org/docs/handling-events.html) <!-- 6% -->
-  - [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html) <!-- 8% -->
+  - [Doc | Handling Events](https://reactjs.org/docs/handling-events.html) <!-- 6% -->
+  - [Doc | Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html) <!-- 8% -->
 - PP | [lab-react-ironcontacts](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-ironcontacts)
 - Optional Exercise | [lab-react-pizza-builder](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-pizza-builder)
 - React | Lists and Keys
-  - [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html) <!-- 10% -->
+  - [Doc | Lists and Keys](https://reactjs.org/docs/lists-and-keys.html) <!-- 10% -->
 - React | Forms
-  - [Forms](https://reactjs.org/docs/forms.html) <!-- 10% -->
+  - [Doc | Forms](https://reactjs.org/docs/forms.html) <!-- 10% -->
 - DE | [lab-react-data-binding](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-data-binding)
 
 <!-- 
@@ -59,10 +59,10 @@ DE | IronNutrition
 
 ## Week 2 | Saturday 24th February
 - React | Lifting State Up
-  - Lifting State Up (https://reactjs.org/docs/lifting-state-up.html) <!-- 13% -->
+  - [Doc | Lifting State Up](https://reactjs.org/docs/lifting-state-up.html) <!-- 13% -->
 - React | Organize your code
-  - Composition vs Inheritance (https://reactjs.org/docs/composition-vs-inheritance.html) <!-- 6% -->
-  - Thinking In React (https://reactjs.org/docs/thinking-in-react.html) <!-- 10% -->
+  - [Doc | Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html) <!-- 6% -->
+  - [Doc | Thinking In React](https://reactjs.org/docs/thinking-in-react.html) <!-- 10% -->
 - PP | [Reproduce Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 - Optional Advanced Exercise | Try to reproduce Pokedex.org with pokeapi.co and axios
 
@@ -78,8 +78,18 @@ DE | Cinema Billboard
 ## Week 3 | Tuesday 27th February and Thursday 1st March
 
 - React Router | Introduction to Routing
+  - [A Simple React Router v4 Tutorial](https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf)
+  - [Doc | Basic Components](https://reacttraining.com/react-router/web/guides/basic-components)
 - React Router | Advanced Routing
-- DE | (in construction)
+  - [Doc | `BrowserRouter`](https://reacttraining.com/react-router/web/api/BrowserRouter)
+  - [Doc | `Route`](https://reacttraining.com/react-router/web/api/Route)
+  - [Doc | `Switch`](https://reacttraining.com/react-router/web/api/Switch)
+  - [Doc | `Link`](https://reacttraining.com/react-router/web/api/Link)
+  - [Doc | `NavLink`](https://reacttraining.com/react-router/web/api/NavLink)
+  - [Doc | `history`](https://reacttraining.com/react-router/web/api/history)
+  - [Doc | `location`](https://reacttraining.com/react-router/web/api/location)
+  - [Doc | `match`](https://reacttraining.com/react-router/web/api/match)
+- DE | [lab-react-wikicountries](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-wikicountries)
 - React | HTTP with Axios
 - Express | Build a REST API
   - [REST API Express](http://learn.ironhack.com/#/learning_unit/2507)
