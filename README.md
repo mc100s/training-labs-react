@@ -91,6 +91,8 @@ DE | Cinema Billboard
   - [Doc | `match`](https://reacttraining.com/react-router/web/api/match)
 - DE | [lab-react-wikicountries](https://github.com/mc100s/training-labs-react/tree/master/src/lab-react-wikicountries)
 - React | HTTP with Axios
+  - [Using Axios with React](https://alligator.io/react/axios-react/)
+  - [Axios documentation](https://github.com/axios/axios)
 - Express | Build a REST API
   - [REST API Express](http://learn.ironhack.com/#/learning_unit/2507)
 - PP | (in construction)
@@ -146,6 +148,7 @@ Project #3: MEAN Application
 
 
 ## Other resources to read
+- **[Summary](https://github.com/mc100s/training-labs-react/blob/master/summary.md)**
 - [React’s Component Lifecycles](https://medium.com/mofed/reacts-component-lifecycles-adf0ebc89d23)
 
 ## Exercises solutions
