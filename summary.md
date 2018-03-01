@@ -376,13 +376,13 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
   </tr>
   <tr>
     <td><code>&lt;Route&gt;</code></td>
-    <td>When the url matches its props `path`, it renders its content</td>
+    <td>When the url matches its props <code>path</code>, it renders its content</td>
     <td>
       <ul>
-        <li>`path`: string</li>
-        <li>`component`: Component</li>
-        <li>`render`: func</li>
-        <li>`exact`: bool</li>
+        <li><code>path</code>: string</li>
+        <li><code>component</code>: Component</li>
+        <li><code>render</code>: func</li>
+        <li><code>exact</code>: bool</li>
       </ul>
     </td>
   </tr>
@@ -394,22 +394,22 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
   </tr>
   <tr>
     <td><code>&lt;Link&gt;</code></td>
-    <td>Replace the `<a>` tag of HTML in React Router</td>
+    <td>Replace the <code>&lt;a&gt;</code> tag of HTML in React Router</td>
     <td>
       <ul>
-        <li>`to`: string</li>
-        <li>`to`: object</li>
+        <li><code>to</code>: string</li>
+        <li><code>to</code>: object</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td><code>&lt;NavLink&gt;</code></td>
-    <td>A special version of the `<Link>` that will add styling attributes to the rendered element when it matches the current URL</td>
+    <td>A special version of the <code>&lt;Link&gt;</code> that will add styling attributes to the rendered element when it matches the current URL</td>
     <td>
       <ul>
-        <li>`activeClassName`: string</li>
-        <li>`activeStyle`: object</li>
-        <li>`exact`: bool</li>
+        <li><code>activeClassName</code>: string</li>
+        <li><code>activeStyle</code>: object</li>
+        <li><code>exact</code>: bool</li>
       </ul>
     </td>
   </tr>
