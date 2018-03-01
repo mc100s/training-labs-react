@@ -1,6 +1,15 @@
 ![Ironhack logo](https://i.imgur.com/1QgrNNw.png)
 
 # React Summary
+1. Start a simple  React project
+1. React Components
+1. React Props
+1. React States
+1. React Lifecycle
+1. React Events
+1. React and forms
+1. React Router
+1. Using Axios with React
 
 ## Start a simple  React project
 
