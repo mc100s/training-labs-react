@@ -369,13 +369,13 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
     <th width="30%"> Main Props </td>
   </tr>
   <tr>
-    <td>`<BrowserRouter>`</td>
+    <td><code>&lt;BrowserRouter&gt;</code></td>
     <td>Router Component that should wrap your application</td>
     <td>
     </td>
   </tr>
   <tr>
-    <td>`<Route>`</td>
+    <td><code>&lt;Route&gt;</code></td>
     <td>When the url matches its props `path`, it renders its content</td>
     <td>
       <ul>
@@ -387,13 +387,13 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
     </td>
   </tr>
   <tr>
-    <td>`<Switch>`</td>
-    <td>Group `<Route>` together and display maximum 1</td>
+    <td><code>&lt;Switch&gt;</code></td>
+    <td>Group <code>&lt;Route&gt;</code> together and display maximum 1</td>
     <td>
     </td>
   </tr>
   <tr>
-    <td>`<Link>`</td>
+    <td><code>&lt;Link&gt;</code></td>
     <td>Replace the `<a>` tag of HTML in React Router</td>
     <td>
       <ul>
@@ -403,7 +403,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
     </td>
   </tr>
   <tr>
-    <td>`<NavLink>`</td>
+    <td><code>&lt;NavLink&gt;</code></td>
     <td>A special version of the `<Link>` that will add styling attributes to the rendered element when it matches the current URL</td>
     <td>
       <ul>
