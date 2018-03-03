@@ -93,9 +93,6 @@ DE | Cinema Billboard
 - React | HTTP with Axios
   - [Using Axios with React](https://alligator.io/react/axios-react/)
   - [Axios documentation](https://github.com/axios/axios)
-- Express | Build a REST API
-  - [REST API Express](http://learn.ironhack.com/#/learning_unit/2507)
-- PP | (in construction)
 
 <!-- 
 Angular | Advanced Routing
@@ -108,12 +105,13 @@ DE | MyRecipeBook
 
 ## Week 3 | Saturday 3rd March
 
+- Express | Build a REST API
+  - [REST API Express](http://learn.ironhack.com/#/learning_unit/2507)
 - React & Express | Backend / Frontend integration
+  - [React & Express | Frontend Backend Integration](https://github.com/mc100s/training-labs-react/tree/master/lessons/react/express-integrations.md)
 - React & Express | Code Along
-- DE | (in construction)
 - React & Express | Authentication
-- React & Express | File Upload
-- PP | (in construction)
+  - [Authentication with JWT](https://github.com/ta-web-paris/auth-jwt-lab)
 
 <!-- 
 Authentication
@@ -126,6 +124,7 @@ DE | IronForum
 
 ## Week 4 | Tuesday 6th March and Thursday 8th March
 
+- React & Express | File Upload
 - React & Express | Route Guards
 - React & Express | Deployment
 - DE | (in construction)

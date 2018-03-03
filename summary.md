@@ -2,12 +2,15 @@
 
 # React Summary
 1. Start a simple  React project
+1. JSX
 1. React Components
 1. React Props
 1. React States
 1. React Lifecycle
 1. React Events
 1. React and forms
+1. Conditional rendering
+1. List rendering
 1. React Router
 1. Using Axios with React
 
@@ -50,6 +53,32 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
+## JSX
+
+<table>
+  <tr>
+    <th>Rule</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>A JSX is always wraped by a tag</td>
+    <td>
+      - <code>&lt;App /&gt;</code><br>
+      - <code>&lt;MyCoponent&gt;Hello&lt;/MyCoponent&gt;</code><br>
+      - <code>&lt;ul&gt;&lt;li&gt;Elt1&lt;/li&gt;&lt;li&gt;Elt2&lt;/li&gt;&lt;/ul&gt;</code>
+    </td>
+  </tr>
+  <tr>
+    <td>To put JavaScript, you need to use <code>{</code> and <code>}</code></td>
+    <td><code></code></td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td><code></code></td>
+  </tr>
+</table>
+
 
 ## React Components
 
@@ -238,23 +267,23 @@ class Toggle extends React.Component {
 
 Event Types | Event Names
 -- | --
-Clipboard Events | `onCopy onCut onPaste`
-Composition Events | `onCompositionEnd onCompositionStart onCompositionUpdate`
-Keyboard Events | `onKeyDown onKeyPress onKeyUp`
-Focus Events | `onFocus onBlur`
-Form Events | `onChange onInput onInvalid onSubmit`
-Mouse Events | `onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave onMouseMove onMouseOut onMouseOver onMouseUp`
+Clipboard Events | `onCopy` `onCut` `onPaste`
+Composition Events | `onCompositionEnd` `onCompositionStart` `onCompositionUpdate`
+Keyboard Events | `onKeyDown` `onKeyPress` `onKeyUp`
+Focus Events | `onFocus` `onBlur`
+Form Events | `onChange` `onInput` `onInvalid` `onSubmit`
+Mouse Events | `onClick` `onContextMenu` `onDoubleClick` `onDrag` `onDragEnd` `onDragEnter` `onDragExit` `onDragLeave` `onDragOver` `onDragStart` `onDrop` `onMouseDown` `onMouseEnter` `onMouseLeave` `onMouseMove` `onMouseOut` `onMouseOver` `onMouseUp`
 Selection Events | `onSelect`
-Touch Events | `onTouchCancel onTouchEnd onTouchMove onTouchStart`
+Touch Events | `onTouchCancel` `onTouchEnd` `onTouchMove` `onTouchStart`
 UI Events | `onScroll`
 Wheel Events | `onWheel`
-Media Events | ```onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted onEnded onError onLoadedData onLoadedMetadata onLoadStart onPause onPlay onPlaying onProgress onRateChange onSeeked onSeeking onStalled onSuspend onTimeUpdate onVolumeChange onWaiting```
-Image Events | `onLoad onError`
-Animation Events | `onAnimationStart onAnimationEnd onAnimationIteration`
+Media Events | `onAbort` `onCanPlay` `onCanPlayThrough` `onDurationChange` `onEmptied` `onEncrypted` `onEnded` `onError` `onLoadedData` `onLoadedMetadata` `onLoadStart` `onPause` `onPlay` `onPlaying` `onProgress` `onRateChange` `onSeeked` `onSeeking` `onStalled` `onSuspend` `onTimeUpdate` `onVolumeChange` `onWaiting`
+Image Events | `onLoad` `onError`
+Animation Events | `onAnimationStart` `onAnimationEnd` `onAnimationIteration`
 Transition Events | `onTransitionEnd`
 Other Events | `onToggle`
 
-### Conditional rendering
+## Conditional rendering
 
 ```javascript
 class MyComponent extends React.Component {
@@ -287,7 +316,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-### List rendering
+## List rendering
 
 ```javascript
 const students = ['Alice', 'Bob', 'Charly', 'David']
