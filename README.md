@@ -124,14 +124,13 @@ DE | IronForum
 
 ## Week 4 | Tuesday 6th March and Thursday 8th March
 
+- [MERN Boilerplate](https://github.com/mc100s/mern-boilerplate)
 - React & Express | File Upload
 - React & Express | Route Guards
 - React & Express | Deployment
-- DE | (in construction)
-- Irontrello | Project Introduction
-- Irontrello | Backend Architecture
-- Irontrello | Angular Architecture
-- Irontrello | Dragula, Splash Screen, and Integration
+- IronCountries | Project Introduction
+- IronCountries | Backend Architecture
+- IronCountries | React Architecture
 
 <!-- 
 Irontrello | Project Introduction
