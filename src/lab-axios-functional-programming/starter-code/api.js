@@ -10,7 +10,7 @@ function displayDataInTheConsole(page) {
 }
 
 function getTotalResults(page) {
-  return service.get(`result-${page}.json`)
+  return service.get(`page-${page}.json`)
   .then(response => {
     // TODO: Iteration 1
     // Update that function so it only displays the value of "total_results" (18966)
@@ -19,7 +19,7 @@ function getTotalResults(page) {
 }
 
 function getFirstResultName(page) {
-  return service.get(`result-${page}.json`)
+  return service.get(`page-${page}.json`)
   .then(response => {
     // TODO: Iteration 2
     // Update that function so it only displays the name of the first actor
@@ -28,28 +28,28 @@ function getFirstResultName(page) {
 }
 
 function getNames(page) {
-  return service.get(`result-${page}.json`)
+  return service.get(`page-${page}.json`)
   .then(response => {
     // TODO: Iteration 3
   })
 }
 
 function getIdsAndNames(page) {
-  return service.get(`result-${page}.json`)
+  return service.get(`page-${page}.json`)
   .then(response => {
     // TODO: Iteration 4
   })
 }
 
 function getSortedNames(page) {
-  return service.get(`result-${page}.json`)
+  return service.get(`page-${page}.json`)
   .then(response => {
     // TODO: Iteration 5
   })
 }
 
 function getNamesFiltered(page, searchTerm) {
-  return service.get(`result-${page}.json`)
+  return service.get(`page-${page}.json`)
   .then(response => {
     // TODO: Iteration 6
   })
@@ -57,7 +57,7 @@ function getNamesFiltered(page, searchTerm) {
 
 
 function getActorNamesWithTheirKnownForMovies(page) {
-  return service.get(`result-${page}.json`)
+  return service.get(`page-${page}.json`)
   .then(response => {
     // TODO: Iteration 7
   })
